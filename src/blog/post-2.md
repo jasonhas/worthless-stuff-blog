@@ -2,6 +2,9 @@
 title: "Post Deux"
 pubDate: 2025-04-10
 description: "I love this blogging stuff. That's why I create so many"
+image:
+    url: 'https://docs.astro.build/assets/rose.webp'
+    alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging"]
 ---
 
