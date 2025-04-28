@@ -6,7 +6,15 @@ const {frontmatter} = Astro.props
 
 <BaseLayout pageTitle={frontmatter.title}>
     <div class="px-6 md:px-2">
-        <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+        <div class="breadcrumbs text-sm pt-6">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li>{frontmatter.title}</li>
+            </ul>
+          </div>
+        <h1 class="text-4xl font-bold text-center pt-8">{frontmatter.title}</h1>
+        <p class="font-semibold text-center p-2">{frontmatter.pubDate.toDateString()}</p>
         <div>
             <img src={frontmatter.image.url} alt="Main Image" />
         </div>

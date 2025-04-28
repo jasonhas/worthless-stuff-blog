@@ -7,8 +7,14 @@ const pageTitle = "Tag List"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+    <div class="breadcrumbs text-sm">
+        <ul>
+          <li><a class="/">Home</a></li>
+          <li>Tags</li>
+        </ul>
+      </div>
+    <h1 class="text-4xl font-bold text-center pt-8">{pageTitle}</h1>
     <div>
-        <p>Here is a list of all tags used in posts on this site.</p>
         <ul>
             {tags.map((tag) => (
                 <li><a href={`/tags/${tag}`}>{tag}</a></li>

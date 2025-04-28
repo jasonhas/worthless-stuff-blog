@@ -6,10 +6,16 @@ const pageTitle = "The Blog"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div>
-        <p>This is where all the posts will go.</p>
+    <div class="breadcrumbs text-sm">
         <ul>
-            {allPosts.map((post: any) => <li><a href={`/posts/${post.id}`}>{post.data.title}</a></li>)}
+          <li><a href="/">Home</a></li>
+          <li>Blog</li>
+        </ul>
+      </div>
+    <h1 class="text-4xl font-bold text-center pt-8 pb-4">{pageTitle}</h1>
+    <div>
+        <ul>
+            {allPosts.map((post: any) => <li><a href={`/posts/${post.id}`} class="hover:text-blue-600">{post.data.title} - {post.data.pubDate.toLocaleDateString()}</a></li>)}
         </ul>
     </div>
 </BaseLayout>
