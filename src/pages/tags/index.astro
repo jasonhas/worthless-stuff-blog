@@ -7,12 +7,13 @@ const pageTitle = "Tag List"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="breadcrumbs text-sm">
+    <div class="px-6 md:px-2 pt-6">
+    <div class="breadcrumbs text-sm pt-6">
         <ul>
           <li><a href="/">Home</a></li>
           <li>Tags</li>
         </ul>
-      </div>
+    </div>
     <h1 class="text-4xl font-bold text-center pt-8 pb-2">{pageTitle}</h1>
     <div>
         <ul>
@@ -20,5 +21,7 @@ const pageTitle = "Tag List"
                 <li class="py-1"><a href={`/tags/${tag}`} class="hover:text-blue-600">{tag}</a></li>
             ))}
         </ul>
+    </div>   
     </div>
+
 </BaseLayout>
